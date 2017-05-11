@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     27/nov/2012 09.45.01                                                        
+
+     project    
+     description
+                   
+     Andrea.Fontana                                                                
+     ====================================================================== -->
+<project name="project" default="transform">
+    <description>
+            description
+    </description>
+
+    <!-- ================================= 
+          target: transform              
+         ================================= -->
+    <target name="transform" >
+    	<property name="inputFiles" value="expRelPortal.xml"/>  
+
+    	<copydir dest="out" src="resources"></copydir>
+    	<xslt style="xslt/MasterDoc.xsl" in="in/${inputFiles}" out="out/Monte1213.html" ></xslt>
+    	<replace file="out/Gesiass.html"  token="@file@" value="${inputFiles}"/>	
+    </target>
+
+</project>
