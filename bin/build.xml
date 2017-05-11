@@ -19,8 +19,8 @@
     	<property name="inputFiles" value="expRelPortal.xml"/>  
 
     	<copydir dest="out" src="resources"></copydir>
-    	<xslt style="xslt/MasterDoc.xsl" in="in/${inputFiles}" out="out/Monte1213.html" ></xslt>
-    	<replace file="out/Gesiass.html"  token="@file@" value="${inputFiles}"/>	
+    	<xslt style="xslt/MasterDoc.xsl" in="in/${inputFiles}" out="out/xxxxxx.html" ></xslt>
+    	<replace file="out/xxxxxx.html"  token="@file@" value="${inputFiles}"/>	
     </target>
 
 </project>
